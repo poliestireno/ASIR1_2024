@@ -100,6 +100,11 @@ if (edad >= 18) {
 
 **Explicación Detallada:** Los condicionales `if` y `else` permiten ejecutar bloques de código en función de una condición.
 
+**Ejercicios**
+- E1: Crear un script que intercambie los valores de dos variables.
+- E2: Crear un programa que compare dos números e indique cuál es mayor, o si son iguales.
+- E3: Crear un programa que verifique si una persona es mayor de edad.
+
 ### Bucles
 
 ```javascript
