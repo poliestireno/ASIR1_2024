@@ -134,6 +134,16 @@ do {
 - **while**: Ejecuta el código mientras una condición sea `true`.
 - **do-while**: Similar a `while`, pero asegura que el código se ejecute al menos una vez.
 
+## 3.5. Prompt
+### El usuario introduce datos al programa
+```javascript
+
+let intento = parseInt(prompt("Adivina el número (entre 1 y 100):"));
+
+const entrada = prompt("Introduce una nota (o escribe 'fin' para terminar):");
+    
+ ```   
+
 ## 4. Funciones
 
 ### Declaración de Funciones
