@@ -112,6 +112,7 @@ if (edad >= 18) {
 for (let i = 0; i < 5; i++) {
     console.log(i);
 }
+![image](https://github.com/user-attachments/assets/561a8a88-2dbc-4e61-b99f-a8a0bdacdd02)
 
 // Bucle while
 let i = 0;
