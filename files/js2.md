@@ -109,11 +109,15 @@ if (edad >= 18) {
 
 ```javascript
 // Bucle for
-for (let i = 0; i < 5; i++) {
-    console.log(i);
+for (let i = 0; i < 3 ; i++)
+{
+    numJugador = prompt('intento nº'+ (i+1) +': dime número');
+    if (numJugador==numObjetivo)
+    {
+        console.log("EDLB");
+        break;
+    }
 }
-![image](https://github.com/user-attachments/assets/561a8a88-2dbc-4e61-b99f-a8a0bdacdd02)
-
 // Bucle while
 let i = 0;
 while (i < 5) {
@@ -122,11 +126,41 @@ while (i < 5) {
 }
 
 // Bucle do-while
-i = 0;
-do {
-    console.log(i);
+let i = 0;
+while (i < 3 ) {
+    numJugador = prompt('intento nº'+ (i+1) +': dime número');
+    if (numJugador==numObjetivo)
+    {
+        console.log("EDLB");
+        break;
+    }
     i++;
-} while (i < 5);
+}
+// for como  while
+let i = 0;
+for (;i < 3 ;) {
+    numJugador = prompt('intento nº'+ (i+1) +': dime número');
+    if (numJugador==numObjetivo)
+    {
+        console.log("EDLB");
+        break;
+    }
+    i++;
+}
+// sin utilizar el break
+
+let seguir = true; 
+for (let i = 0; ( i < 3 && seguir); i++)
+{
+    numJugador = prompt('intento nº'+ (i+1) +': dime número');
+    if (numJugador==numObjetivo)
+    {
+        console.log("EDLB");
+        seguir = false;
+        //o i= i +3; // i+=3;
+    }
+}
+
 ```
 
 **Explicación Detallada:**
