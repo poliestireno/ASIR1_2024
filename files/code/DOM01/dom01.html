@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introduce un numero (1-100)</h1>
+    <input type="number" id="miInput"/>
+    <button id="miBoton">Dame!</button>
+    <p id="miParrafo">mi parrafo</p>
+    <p id="miParrafoIntentos"></p>
+    <p id="miParrafoNumeros"></p>
+    <img id="imagen1" src="images/lisa01.jpg"/>
+    <button id="miBoton2">cambia!</button>
+    <button id="miBoton3">suena!</button>
+    <button id="miBoton4">pausa!</button>
+
+    <script>
+// se genera un número aletorio entre 1 y 100
+const numeroOculto = Math.floor((Math.random()*100)+1);
+
+// instancio los necesarios del DOM (html)
+const constMiParrafo = document.getElementById("miParrafo");
+const constMiBoton = document.getElementById("miBoton");
+const constMiInput = document.getElementById("miInput");
+const constParrafoIntentos = document.getElementById("miParrafoIntentos");
+const constParrafoNumeros = document.getElementById("miParrafoNumeros");
+const constMiBoton2 = document.getElementById("miBoton2");
+const constImagen1 = document.getElementById("imagen1");
+const constMiBoton3 = document.getElementById("miBoton3");
+const constMiBoton4 = document.getElementById("miBoton4");
+var audio = new Audio();
+audio.src ="sounds/audio01.mp3";
+
+constMiBoton4.addEventListener ( 'click', () => {
+
+audio.pause();
+
+});
+
+
+constMiBoton3.addEventListener ( 'click', () => {
+
+
+
+    audio.play();
+
+});
+
+constMiBoton2.addEventListener ( 'click', () => {
+
+constImagen1.src = "images/burns01.jpeg";
+
+});
+
+var numero_intentos = 0;
+var listaNumeros = "";
+
+//constMiParrafo.textContent = "el numero oculto es "+numeroOculto;
+
+constMiBoton.addEventListener ( 'click', () => {
+
+    numero_intentos++;
+    constParrafoIntentos.textContent="Número intentos: "+numero_intentos;
+    const numeroInput = parseInt(constMiInput.value,10);
+
+
+    listaNumeros= listaNumeros  + " " + numeroInput;
+    constParrafoNumeros.textContent="Números jugados "+listaNumeros;
+
+
+
+
+
+/*     SONIDO
+     JUEGO AVANZADO
+
+    
+        Números jugados 
+        77 FRESQUIBIRIS
+        60 HELADO
+        85 ...
+  */  
+    
+    // acierta
+    /*
+        caliente/frio
+
+        quemando        +-3
+        muy caliente    +-8
+        caliente        +-13
+        templao         +-18
+        fresquibiris    +-23
+        frio            +-28
+
+
+        guardar el número de intentos
+        y cuando de la enhorabuena que diga lo siguiente
+        en función de un ranking:
+        número de intentos está entre 13 o más dirá "eres malillo"
+        número de intentos entre 9 y 12   dirá "eres del montón"
+        número de intentos entre 4 y 8   dirá "eres grande"
+        número de intentos < 4  dirá "eres Dios"
+
+
+    */
+
+    if (numeroOculto==numeroInput)
+    {
+        constMiParrafo.textContent = "Enhorabuena!!!";
+        constMiParrafo.style.color = "green";
+
+        let ranking = "malillo";
+        if (numero_intentos<=4)
+        {
+            ranking = "Dios";
+        }
+        else if (numero_intentos<=8)
+        {
+            ranking = "Grande";
+        }
+        else if (numero_intentos<=14)
+        {
+            ranking = "del Montón";
+        }
+        
+
+        constParrafoIntentos.textContent= "Eres "+ranking;
+
+        // sonido 
+    }  
+    else if (Math.abs(numeroOculto-numeroInput) < 3)
+    {
+        constMiParrafo.textContent = "QUEMANDO!!!";
+        constMiParrafo.style.color = "red";
+    }
+    else if (Math.abs(numeroOculto-numeroInput) < 8)
+    {
+        constMiParrafo.textContent = "MUY CALIENTE!!!";
+        constMiParrafo.style.color = "orange";
+    }
+    else if (Math.abs(numeroOculto-numeroInput) < 13)
+    {
+        constMiParrafo.textContent = "CALIENTE!!!";
+        constMiParrafo.style.color = "yellow";
+    }
+    else if (Math.abs(numeroOculto-numeroInput) < 18)
+    {
+        constMiParrafo.textContent = "TEMPLAOOO!!!";
+        constMiParrafo.style.color = "black";
+    }
+    else if (Math.abs(numeroOculto-numeroInput) < 23)
+    {
+        constMiParrafo.textContent = "FRESQUIBIRIS!!!";
+        constMiParrafo.style.color = "blue";
+    }
+    else
+    {
+        constMiParrafo.textContent = "FRIO HELAO!!!";
+        constMiParrafo.style.color = "violet";
+    }
+
+    
+}
+
+);
+
+
+    </script>
+
+</body>
+</html>
