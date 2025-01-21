@@ -242,6 +242,80 @@ let coche = {
     }
 };
 ```
+### Arrays
+```javascript
+// Crear un array
+const frutas = ["Manzana", "Banana", "Cereza"];
+
+// Acceder a elementos por su índice
+console.log(frutas[0]); // "Manzana"
+console.log(frutas[1]); // "Banana"
+
+// Cambiar el valor de un elemento
+frutas[1] = "Naranja";
+console.log(frutas); // ["Manzana", "Naranja", "Cereza"]
+
+
+const numeros = [1, 2, 3, 4, 5];
+
+// Añadir elementos al final
+numeros.push(6); 
+console.log(numeros); // [1, 2, 3, 4, 5, 6]
+
+// Eliminar el último elemento
+numeros.pop(); 
+console.log(numeros); // [1, 2, 3, 4, 5]
+
+// Añadir elementos al inicio
+numeros.unshift(0);
+console.log(numeros); // [0, 1, 2, 3, 4, 5]
+
+// Eliminar el primer elemento
+numeros.shift();
+console.log(numeros); // [1, 2, 3, 4, 5]
+
+
+const animales = ["Perro", "Gato", "Loro"];
+
+for (let i = 0; i < animales.length; i++) {
+  console.log(animales[i]);
+}
+// Salida:
+// Perro
+// Gato
+// Loro
+animales.forEach((animal, index) => {
+  console.log(`${index}: ${animal}`);
+});
+// Salida:
+// 0: Perro
+// 1: Gato
+// 2: Loro
+const matriz = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+// Acceder a elementos individuales
+console.log(matriz[1][2]); // 6
+
+// Recorrer toda la matriz
+for (let fila = 0; fila < matriz.length; fila++) {
+  for (let col = 0; col < matriz[fila].length; col++) {
+    console.log(matriz[fila][col]);
+  }
+}
+const numeros = [4, 2, 9, 1, 5];
+numeros.sort((a, b) => a - b); // Orden ascendente
+console.log(numeros); // [1, 2, 4, 5, 9]
+
+numeros.sort((a, b) => b - a); // Orden descendente
+console.log(numeros); // [9, 5, 4, 2, 1]
+
+```
+
+
 
 ### Clases (ES6)
 
