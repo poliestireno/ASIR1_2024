@@ -1,0 +1,37 @@
+
+* {
+    text-align: center;
+    color: blue;
+  }  
+  
+  body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: rgb(238, 18, 18);
+    text-align: center;
+  }
+  
+  .grandegrande {
+      font-family: monospace;
+      font-size: 60px;
+      color: rgb(238, 220, 18);
+  }
+  .medianammnediana {
+      font-family: monospace;
+      font-size: 30px;
+  }
+  .colorcolor
+  {
+      color: rgb(238, 18, 18);
+  }
+  
+  p {
+    font-family: monospace;
+    font-size: 60px;
+  }
+  #choco {
+    color: rgb(18, 238, 58);
+  }
+  
