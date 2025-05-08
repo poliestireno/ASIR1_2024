@@ -29,14 +29,31 @@
             w:30,
             h:60
         };
+        const diana =
+        {
+            x: 700,
+            y: 150,
+            w:50,
+            h:50,
+            imagen: new Image()
+
+        };
+
+        diana.imagen.src = "images/diana.png";
 
         function pintarJugador() 
         {
             ctx.fillStyle = 'red';
             ctx.fillRect(p1.x,p1.y,p1.w,p1.h);    
         }
-        ya esta descargada la diana, seguimos mostrandola
+        function pintarDiana() 
+        {           
+            ctx.drawImage(diana.imagen,diana.x,diana.y,diana.w,diana.h);  
+        }
         pintarJugador();
+
+        diana.imagen.onload = function (){ pintarDiana() };
+        
 
     </script>
 </body>
